@@ -4,11 +4,18 @@
   <li>{{ user.first_name }}, {{ user.last_name }}, {{ user.email }}</li>
 </ul>
 
-Search for a username <input [(ngModel)]="userToSearch" /> <br />
+<!-- Exercise 1: Use the correct angular directive inside the input element
+  to implement two-way binding on the property called 'userToSearch'.
+-->
+Search for a username <input /> <br />
 
 <p><strong>User entered:</strong> {{ userToSearch }}<br /></p>
 
-<button (click)="searchUserInfo()">Search user avatar</button>
+<!--
+  Exercise 2: Add the code required so that when we click on the Search button, 
+  we call the searchUserInfo method in the component.
+-->
+<button>Search user avatar</button>
 
 <div *ngIf="userFound">
   <p>Displaying {{ user.first_name }} profile picture</p>
